@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio personal de Flavio Rinaldi - Desarrollador Web Front End">
+  <title>Flavio Rinaldi | Portafolio Front End</title>
+  
+  <!-- Google Fonts: Inter para texto y Fira Code para detalles técnicos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- COMENTARIO EXPLICATIVO 1: Encabezado semántico (<header>) que contiene la navegación principal (<nav>) -->
+  <header class="header">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#hero" class="nav__logo" aria-label="Inicio - Flavio Rinaldi">FR</a>
+      <ul class="nav__list">
+        <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+        <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+        <li><a href="#personal" class="nav__link">Intereses</a></li>
+        <li><a href="#contacto" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido principal del portafolio -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <span class="hero__subtitle">¡Hola! Mi nombre es</span>
+        <h1 id="hero-title" class="hero__title">Flavio Rinaldi</h1>
+        <p class="hero__tagline">Desarrollador Web Front End en formación & Apasionado por la tecnología</p>
+        <div class="hero__cta">
+          <a href="#contacto" class="btn btn--primary">Contactame</a>
+          <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-label="Perfil de GitHub de Flavio Rinaldi (abre en nueva pestaña)">
+            Ver GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero__avatar-container">
+        <!-- Foto/Avatar estilizado -->
+        <img src="https://via.placeholder.com/250" alt="Ilustración estilo avatar de Flavio Rinaldi" class="hero__avatar">
+      </div>
+    </section>
+
+    <!-- COMENTARIO EXPLICATIVO 2: Sección <section> con id único y aria-labelledby para asociar accesiblemente el título -->
+    <section id="sobre-mi" class="section sobre-mi" aria-labelledby="sobre-mi-title">
+      <h2 id="sobre-mi-title" class="section__title">Sobre mí</h2>
+      <p class="section__text">
+        Estudiante de Desarrollo de Sistemas Web enfocado en el área Front End. Me apasiona transformar ideas e interfaces complejas en experiencias web accesibles, intuitivas y eficientes. Actualmente expandiendo mis conocimientos en maquetación avanzada, JavaScript y buenas prácticas de desarrollo.
+      </p>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="section habilidades" aria-labelledby="habilidades-title">
+      <h2 id="habilidades-title" class="section__title">Habilidades Técnicas</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>HTML5 Semántico</h3>
+          <p>Estructuración limpia, estándar y enfocada en accesibilidad (A11y).</p>
+        </article>
+        <article class="skill-card">
+          <h3>CSS3 & Layouts</h3>
+          <p>Diseño responsive con Flexbox, CSS Grid y Variables CSS.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Git & GitHub</h3>
+          <p>Control de versiones, flujo de ramas y documentación clara en repositorios.</p>
+        </article>
+        <article class="skill-card">
+          <h3>UI/UX & Responsive</h3>
+          <p>Adaptabilidad a múltiples pantallas y enfoque Mobile First.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Proyectos destacados -->
+    <section id="proyectos" class="section proyectos" aria-labelledby="proyectos-title">
+      <h2 id="proyectos-title" class="section__title">Proyectos</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Landing Portafolio Personal</h3>
+          <p>Proyecto práctico para la materia Desarrollo de Sistemas Web. Demuestra la maquetación semántica, diseño adaptable y animaciones modernas.</p>
+          <div class="project-card__tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Grid/Flexbox</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMENTARIO EXPLICATIVO 3: Sección personal a elección requerida por la consigna -->
+    <section id="personal" class="section personal" aria-labelledby="personal-title">
+      <h2 id="personal-title" class="section__title">Sección Personal: Pasiones & Hobbies</h2>
+      <div class="personal__content">
+        <p>Más allá del código, disfruto explorar tecnologías emergentes, la resolución de problemas lógicos y el aprendizaje continuo. Creo firmemente en la curiosidad constante como motor del crecimiento profesional.</p>
+      </div>
+    </section>
+
+    <!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto interactivo con asociación explicita de labels e inputs -->
+    <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
+      <h2 id="contacto-title" class="section__title">Contacto</h2>
+      <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje!');">
+        <div class="form-group">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ana Pérez">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com">
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribí tu mensaje aquí..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Pie de página semántico (<footer) -->
+  <footer class="footer">
+    <p>&copy; 2026 Flavio Rinaldi. Desarrollado para la materia Desarrollo de Sistemas Web (Front End).</p>
+    <div class="footer__links">
+      <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/flavio-rinaldi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>
