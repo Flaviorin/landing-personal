@@ -17,6 +17,13 @@
 - **Revisión y adaptación personal:** 
   Ajusté los valores de colores neón en las variables CSS para mantener un contraste legible y adaptado al tema oscuro.
 
+### Paso 3
+- **Prompt:**
+  > "Diseñá la maquetación CSS combinando Flexbox para la estructura unidimensional (Header, Nav, Portada, Footer y Formulario) y CSS Grid con repeat(auto-fit, minmax(...)) para las secciones multidimensionales de tarjetas (Habilidades y Proyectos). Asegurá que sea adaptable y fluido."
+- **Justificación técnica (Flexbox vs CSS Grid):**
+  - **Flexbox:** Seleccionado para la barra de navegación, la sección portada y el pie de página. Es ideal para alineación en un solo eje (horizontal o vertical) y distribución dinámica de elementos (como botones o enlaces).
+  - **CSS Grid:** Utilizado en las secciones de Habilidades y Proyectos. Permite estructurar tarjetas en dos dimensiones (filas y columnas) de manera fluida usando `auto-fit` y `minmax()`, haciendo que el diseño sea responsive sin necesidad de recargar de media queries.
+
 ## Enlaces
 - Repositorio: https://github.com/flaviorin/landing-personal
 - Sitio publicado: https://tu-proyecto.vercel.app
