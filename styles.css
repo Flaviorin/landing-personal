@@ -438,3 +438,54 @@ img {
 .nav__link:hover::after {
   width: 100%;
 }
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES) & ACCESIBILIDAD
+   ========================================================================== */
+
+/* Ajustes para pantallas pequeñas (Celulares / hasta 768px) */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .portada {
+    justify-content: center;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .portada__tagline {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portada__cta {
+    justify-content: center;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Reducción de movimiento para usuarios con sensibilidad visual (A11y) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

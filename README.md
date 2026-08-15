@@ -31,6 +31,13 @@
   Ajusté la duración del @keyframes a 4 segundos e intensifiqué levemente el brillo (box-shadow) en la animación para lograr un acabado estilo dark/tech sin sobrecargar la vista.  
 
 
+### Paso 5
+- **Prompt:**
+  > "Generá las Media Queries para optimizar la vista responsive en pantallas móviles (hasta 768px) ajustando la navegación y el alineamiento de la portada. Incluí la regla @media (prefers-reduced-motion: reduce) para garantizar accesibilidad en usuarios que prefieren no ver animaciones."
+- **Revisión y adaptación personal:** 
+  Probé la disposición del header en dispositivos móviles y ajusté el espaciado interno (padding) de las secciones para evitar el scroll horizontal.
+
+
 ## Enlaces
 - Repositorio: https://github.com/flaviorin/landing-personal
 - Sitio publicado: https://tu-proyecto.vercel.app
