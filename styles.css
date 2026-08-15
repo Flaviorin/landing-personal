@@ -385,3 +385,56 @@ img {
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
 }
+/* ==========================================================================
+   6. ANIMACIONES Y TRANSICIONES PERSONALIZADAS
+   ========================================================================== */
+
+/* Animación Keyframes: Flotación suave para el Avatar */
+@keyframes floatAvatar {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.4);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+  }
+}
+
+/* Aplicación de la animación al Avatar */
+.avatar {
+  animation: floatAvatar 4s ease-in-out infinite;
+}
+
+/* Transiciones interactivas en Tarjetas de Habilidades y Proyectos */
+.skill-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
+}
+
+/* Efecto visual suave en los enlaces de la navegación */
+.nav__link {
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width var(--transition-fast);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
