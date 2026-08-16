@@ -108,8 +108,7 @@
       </div>
     </section>
 
-    <!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto interactivo con asociación explicita de labels e inputs -->
-<!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto funcional integrado con Formspree y procesado mediante JavaScript (fetch) -->
+<!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto funcional integrado con Formspree, procesado mediante JavaScript (Fetch API) con limpieza de campos y retorno al inicio -->
     <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
       <h2 id="contacto-title" class="section__title">Contacto</h2>
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvoyojeo" method="POST">
@@ -128,7 +127,7 @@
         <button type="submit" id="submit-btn" class="btn btn--primary">Enviar mensaje</button>
       </form>
 
-      <!-- Script JS en línea para enviar via AJAX/Fetch y mantener la alerta visual -->
+      <!-- Script JS en línea para enviar via AJAX/Fetch, resetear formulario y desplazar al inicio de la página -->
       <script>
         const form = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
@@ -147,9 +146,10 @@
 
             if (response.ok) {
               alert('¡Gracias por tu mensaje! Me pondré en contacto a la brevedad.');
-              form.reset();
+              form.reset(); // Limpia los inputs del formulario
+              window.scrollTo({ top: 0, behavior: 'smooth' }); // Vuelve arriba suavemente
             } else {
-              alert('Hubo un problema al enviar el formulario. Por favor, intentá nuevamente.');
+              alert('Hubo un problema al enviar el formulario. Por favor, revisá los datos o intentá nuevamente.');
             }
           } catch (error) {
             alert('Error de conexión. Intentalo más tarde.');

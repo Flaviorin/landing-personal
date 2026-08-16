@@ -56,9 +56,9 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
   * *Criterio propio:* Agregué la etiqueta `<link rel="icon">` en la cabecera HTML para vincular el ícono del navegador, mejorando la presentación profesional del proyecto.
 
 * **Paso 7: Integración de Formulario de Contacto Real (Formspree + JavaScript Fetch)**
-  * *Prompt:* `"Configurá el formulario de contacto para enviar los datos de forma funcional utilizando la API de Formspree. Implementá un script de JavaScript nativo con la API Fetch para procesar la petición de forma asíncrona sin recargar la página, mostrando la confirmación mediante una alerta personalizada y deshabilitando temporalmente el botón durante el envío."`
-  * *Criterio y adaptación propia:* Mantuve la respuesta visual mediante un `alert()` de JS e integré las claves de mi propia cuenta en Formspree.
-
+  * *Prompt:* `"Configurá el formulario de contacto para enviar los datos de forma funcional utilizando la API de Formspree. Implementá un script de JavaScript nativo con la API Fetch para procesar la petición de forma asíncrona sin recargar la página, mostrando la confirmación mediante una alerta personalizada, limpiando los inputs (form.reset()) y realizando un desplazamiento suave al inicio de la página (window.scrollTo)."`
+  * *Criterio y adaptación propia:* Mantuve la respuesta visual con `alert()` e incorporé la restauración del formulario y el scroll automático al inicio para optimizar la navegación del usuario tras el envío.
+  
 ---
 
 ## 📄 Licencia
