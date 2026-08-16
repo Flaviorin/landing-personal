@@ -109,23 +109,56 @@
     </section>
 
     <!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto interactivo con asociación explicita de labels e inputs -->
+<!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto funcional integrado con Formspree y procesado mediante JavaScript (fetch) -->
     <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
       <h2 id="contacto-title" class="section__title">Contacto</h2>
-      <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Gracias por tu mensaje!');">
+      <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvoyojeo" method="POST">
         <div class="form-group">
           <label for="nombre">Nombre completo:</label>
           <input type="text" id="nombre" name="nombre" required placeholder="Ej. Ana Pérez">
         </div>
         <div class="form-group">
           <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com">
+          <input type="email" id="email" name="_replyto" required placeholder="tuemail@ejemplo.com">
         </div>
         <div class="form-group">
           <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escribí tu mensaje aquí..."></textarea>
+          <textarea id="mensaje" name="message" rows="4" required placeholder="Escribí tu mensaje aquí..."></textarea>
         </div>
-        <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+        <button type="submit" id="submit-btn" class="btn btn--primary">Enviar mensaje</button>
       </form>
+
+      <!-- Script JS en línea para enviar via AJAX/Fetch y mantener la alerta visual -->
+      <script>
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async function(event) {
+          event.preventDefault();
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Enviando...';
+
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: new FormData(form),
+              headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+              alert('¡Gracias por tu mensaje! Me pondré en contacto a la brevedad.');
+              form.reset();
+            } else {
+              alert('Hubo un problema al enviar el formulario. Por favor, intentá nuevamente.');
+            }
+          } catch (error) {
+            alert('Error de conexión. Intentalo más tarde.');
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar mensaje';
+          }
+        });
+      </script>
     </section>
 
   </main>

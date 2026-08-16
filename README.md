@@ -17,6 +17,7 @@ Proyecto práctico individual desarrollado para la materia **Desarrollo de Siste
   - **Layout Fluido:** Combinación de **Flexbox** (navegación unidimensional, portada, formulario y footer) y **CSS Grid** (cuadrículas bidimensionales responsivas mediante `auto-fit` y `minmax()` para tarjetas).
   - **Animaciones e Interactividad:** Animación personalizada `@keyframes` para la foto de portada (*floatAvatar*) y transiciones suaves (`hover`) en tarjetas y navegación.
   - **Responsive Design & Accessibility:** Ajustes por Media Queries para celulares y soporte de `@media (prefers-reduced-motion: reduce)`.
+- **JavaScript ES6 (Fetch API):** Manejo asíncrono para el envío interactivo del formulario de contacto integrado con Formspree.
 
 ---
 
@@ -53,6 +54,10 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
 
 * **Paso 6: Detalle de Favicon**
   * *Criterio propio:* Agregué la etiqueta `<link rel="icon">` en la cabecera HTML para vincular el ícono del navegador, mejorando la presentación profesional del proyecto.
+
+* **Paso 7: Integración de Formulario de Contacto Real (Formspree + JavaScript Fetch)**
+  * *Prompt:* `"Configurá el formulario de contacto para enviar los datos de forma funcional utilizando la API de Formspree. Implementá un script de JavaScript nativo con la API Fetch para procesar la petición de forma asíncrona sin recargar la página, mostrando la confirmación mediante una alerta personalizada y deshabilitando temporalmente el botón durante el envío."`
+  * *Criterio y adaptación propia:* Mantuve la respuesta visual mediante un `alert()` de JS e integré las claves de mi propia cuenta en Formspree.
 
 ---
 
