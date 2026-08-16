@@ -3,7 +3,7 @@
 Proyecto práctico individual desarrollado para la materia **Desarrollo de Sistemas Web (Front End)**. Consiste en una landing page personal orientada a presentar mi perfil, habilidades técnicas, proyectos y medios de contacto.
 
 ## 🔗 Enlaces del Proyecto
-- **Sitio Publicado (Vercel):** https://landing-personal-mm8xjnv4w-flaviorin-gmailcoms-projects.vercel.app/
+- **Sitio Publicado (Vercel):** https://landing-personal-mu.vercel.app/
 - **Repositorio en GitHub:** https://github.com/flaviorin/landing-personal
 - **Perfil de GitHub:** https://github.com/flaviorin/
 
