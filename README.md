@@ -59,6 +59,10 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
   * *Prompt:* `"Configurá el formulario de contacto para enviar los datos de forma funcional utilizando la API de Formspree. Implementá un script de JavaScript nativo con la API Fetch para procesar la petición de forma asíncrona sin recargar la página, mostrando la confirmación mediante una alerta personalizada, limpiando los inputs (form.reset()) y realizando un desplazamiento suave al inicio de la página (window.scrollTo)."`
   * *Criterio y adaptación propia:* Mantuve la respuesta visual con `alert()` e incorporé la restauración del formulario y el scroll automático al inicio para optimizar la navegación del usuario tras el envío.
   
+* **Paso 8: Configuración de Limpieza de Repositorio y Gitignore**
+  * *Prompt:* `"Explicame cómo remover del seguimiento de Git el archivo .gitattributes y configurar el archivo .gitignore en la raíz del proyecto para evitar subir archivos no deseados manteniendo la estructura limpia."`
+  * *Criterio y adaptación propia:* Ubiqué el archivo `.gitignore` en la raíz del proyecto e ingresé `.gitattributes` para quitarlo del rastreo en GitHub Desktop.
+  
 ---
 
 ## 📄 Licencia
