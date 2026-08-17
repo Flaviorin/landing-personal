@@ -81,6 +81,10 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
   * *Prompt:* `"En pantallas móviles el globo de diálogo quedaba tapado por la barra de navegación sticky. Ajustá el z-index y reposicioná la burbuja hacia abajo en la Media Query para asegurar visibilidad total."`
   * *Criterio y adaptación propia:* Se incrementó el z-index a 101 y se cambió la posición del globo a `top: 105%` en mobile invirtiendo la colita apuntadora para una lectura limpia sin interferencia con la barra `<nav>`.
 
+* **Paso 12: Ajuste de Jerarquía Visual y Escala Responsive en Portada**
+  * *Prompt:* `"En vista móvil la imagen quedaba por encima del texto de bienvenida y ocupaba mucho espacio. Ajustá el flex-wrap y reducí el tamaño del avatar en celulares para que se presente primero el nombre e introducción."`
+  * *Criterio y adaptación propia:* Se modificó la propiedad a `flex-wrap: wrap` en la Media Query de 768px y se redujo el tamaño del avatar a 180px, priorizando la lectura del perfil antes del avatar.
+
 ---
 
 ## 📄 Licencia
