@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio personal de Flavio Rinaldi - Desarrollador Web Front End">
-  <title>Flavio Rinaldi | Portafolio Front End</title>
+  <meta name="description" content="Portafolio personal de Flavio Rinaldi - Desarrollador Web Front End & QA Specialist">
+  <title>Flavio Rinaldi | Portafolio Front End & QA</title>
   <!-- Favicon de la página -->
   <link rel="icon" type="image/png" href="assets/avatar.png">
   
@@ -39,7 +39,7 @@
       <div class="portada__content">
         <span class="portada__subtitle">¡Hola! Mi nombre es</span>
         <h1 id="title" class="title">Flavio Rinaldi</h1>
-        <p class="portada__tagline">Desarrollador Web Front End en formación & Apasionado por la tecnología</p>
+        <p class="portada__tagline">Desarrollador Web Front End & QA Specialist | Apasionado por la tecnología</p>
         <div class="portada__cta">
           <a href="#contacto" class="btn btn--primary">Contactame</a>
           <a href="https://github.com/flaviorin/" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" aria-label="Perfil de GitHub de Flavio Rinaldi (abre en nueva pestaña)">
@@ -47,9 +47,14 @@
           </a>
         </div>
       </div>
+
       <div class="avatar-container">
-        <!-- Foto/Avatar estilizado -->
-        <img src="assets/avatar.png" alt="Ilustración de Flavio Rinaldi" class="avatar">
+        <!-- Globo de diálogo estilo cómic -->
+        <div id="speech-bubble" class="speech-bubble hidden" role="tooltip" aria-hidden="true">
+          <p id="bubble-text"></p>
+        </div>
+        <!-- Foto/Avatar interactivo -->
+        <img src="assets/avatar.png" alt="Ilustración de Flavio Rinaldi - Clic para ver un tip" class="avatar" id="avatar-img">
       </div>
     </section>
 
@@ -57,7 +62,7 @@
     <section id="sobre-mi" class="section sobre-mi" aria-labelledby="sobre-mi-title">
       <h2 id="sobre-mi-title" class="section__title">Sobre mí</h2>
       <p class="section__text">
-        Estudiante de Desarrollo de Sistemas Web enfocado en el área Front End. Me apasiona transformar ideas e interfaces complejas en experiencias web accesibles, intuitivas y eficientes. Actualmente expandiendo mis conocimientos en maquetación avanzada, JavaScript y buenas prácticas de desarrollo.
+        Estudiante de Desarrollo de Sistemas Web enfocado en el área Front End y Calidad de Software (QA). Me apasiona transformar ideas e interfaces complejas en experiencias web accesibles, intuitivas y eficientes, combinando mi perfil analítico con la automatización y el desarrollo.
       </p>
     </section>
 
@@ -81,6 +86,22 @@
           <h3>UI/UX & Responsive</h3>
           <p>Adaptabilidad a múltiples pantallas y enfoque Mobile First.</p>
         </article>
+        <article class="skill-card">
+          <h3>Analista Funcional</h3>
+          <p>Relevamiento de requerimientos, modelado de procesos y nexo técnico-negocio.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Analista de QA</h3>
+          <p>Diseño y ejecución de casos de prueba, reporte de bugs y estrategias de testing.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Automatización de Testing</h3>
+          <p>Pruebas automatizadas end-to-end e integración continua de calidad.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Desarrollo en Python</h3>
+          <p>Scripting, lógica de programación y resolución de algoritmos backend/QA.</p>
+        </article>
       </div>
     </section>
 
@@ -90,11 +111,12 @@
       <div class="projects-grid">
         <article class="project-card">
           <h3>Landing Portafolio Personal</h3>
-          <p>Proyecto práctico para la materia Desarrollo de Sistemas Web. Demuestra la maquetación semántica, diseño adaptable y animaciones modernas.</p>
+          <p>Proyecto práctico para la materia Desarrollo de Sistemas Web. Demuestra maquetación semántica, diseño adaptable, interactividad con JS y animación personalizada.</p>
           <div class="project-card__tags">
             <span>HTML5</span>
             <span>CSS3</span>
             <span>Grid/Flexbox</span>
+            <span>JavaScript</span>
           </div>
         </article>
       </div>
@@ -108,7 +130,7 @@
       </div>
     </section>
 
-<!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto funcional integrado con Formspree, procesado mediante JavaScript (Fetch API) con limpieza de campos y retorno al inicio -->
+    <!-- COMENTARIO EXPLICATIVO 4: Formulario de contacto funcional integrado con Formspree, procesado mediante JavaScript (Fetch API) con limpieza de campos y retorno al inicio -->
     <section id="contacto" class="section contacto" aria-labelledby="contacto-title">
       <h2 id="contacto-title" class="section__title">Contacto</h2>
       <form id="contact-form" class="contact-form" action="https://formspree.io/f/xvoyojeo" method="POST">
@@ -163,7 +185,7 @@
 
   </main>
 
-  <!-- Pie de página semántico (<footer) -->
+  <!-- Pie de página semántico (<footer>) -->
   <footer class="footer">
     <p>&copy; 2026 Flavio Rinaldi. Desarrollado para la materia Desarrollo de Sistemas Web (Front End).</p>
     <div class="footer__links">
@@ -171,6 +193,57 @@
       <a href="https://www.linkedin.com/in/flavio-rinaldi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </footer>
+
+  <!-- Script interactivo para el globo de diálogo estilo cómic -->
+  <script>
+    const messages = [
+      '💼 ¿Querés saber más sobre mi perfil profesional? Podés visitar mi <a href="https://www.linkedin.com/in/flavio-rinaldi/" target="_blank" rel="noopener">LinkedIn</a>.',
+      '🐙 ¡Explorá todos mis proyectos y código fuente directamente en mi <a href="https://github.com/flaviorin/" target="_blank" rel="noopener">GitHub</a>!',
+      '💡 ¿Sabías que con <code>async/await</code> en JavaScript podés manejar peticiones asíncronas de forma limpia y legible?',
+      '🎨 ¿Sabías que las Custom Properties de CSS (variables) se pueden modificar en tiempo real con JavaScript?',
+      '📱 ¿Sabías que <code>grid-template-columns: repeat(auto-fit, minmax(...))</code> genera diseños adaptables sin media queries?',
+      '🚀 ¡Esta landing page está alojada en Vercel y se despliega automáticamente con cada push en GitHub!',
+      '🧪 ¿Sabías que el testing automatizado en QA permite detectar errores tempranos en el ciclo de desarrollo?',
+      '⚡ ¿Sabías que con la API <code>localStorage</code> del navegador podés guardar preferencias del usuario sin base de datos?',
+      '📬 ¡Podés enviarme un mensaje directo desde el formulario al final de la página!',
+      '☕ ¿Sabías que JavaScript fue creado en tan solo 10 días por Brendan Eich en 1995?'
+    ];
+
+    let lastIndex = -1;
+
+    const avatar = document.getElementById('avatar-img');
+    const bubble = document.getElementById('speech-bubble');
+    const bubbleText = document.getElementById('bubble-text');
+
+    avatar.addEventListener('click', (e) => {
+      e.stopPropagation();
+
+      // Si el globo ya está visible, se oculta
+      if (!bubble.classList.contains('hidden')) {
+        bubble.classList.add('hidden');
+        return;
+      }
+
+      // Seleccionar un índice aleatorio sin repetir el anterior
+      let newIndex;
+      do {
+        newIndex = Math.floor(Math.random() * messages.length);
+      } while (newIndex === lastIndex);
+
+      lastIndex = newIndex;
+
+      // Asignar texto y mostrar globo
+      bubbleText.innerHTML = messages[newIndex];
+      bubble.classList.remove('hidden');
+    });
+
+    // Ocultar globo si el usuario hace clic fuera del avatar o del globo
+    document.addEventListener('click', (e) => {
+      if (!bubble.contains(e.target) && e.target !== avatar) {
+        bubble.classList.add('hidden');
+      }
+    });
+  </script>
 
 </body>
 </html>

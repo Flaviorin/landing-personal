@@ -15,9 +15,15 @@ Proyecto práctico individual desarrollado para la materia **Desarrollo de Siste
   - **Custom Properties (Variables CSS):** Para gestión eficiente de la paleta de colores oscuros, fuentes y radios de borde.
   - **Google Fonts:** Tipografías *Inter* (cuerpo) y *Fira Code* (elementos técnicos y logo).
   - **Layout Fluido:** Combinación de **Flexbox** (navegación unidimensional, portada, formulario y footer) y **CSS Grid** (cuadrículas bidimensionales responsivas mediante `auto-fit` y `minmax()` para tarjetas).
-  - **Animaciones e Interactividad:** Animación personalizada `@keyframes` para la foto de portada (*floatAvatar*) y transiciones suaves (`hover`) en tarjetas y navegación.
+  - **Animaciones e Interactividad:** Animación personalizada `@keyframes` para la foto de portada (*floatAvatar*), estilo e interactividad en el globo de cómic (*speech-bubble*) y transiciones suaves (`hover`) en tarjetas y navegación.
   - **Responsive Design & Accessibility:** Ajustes por Media Queries para celulares y soporte de `@media (prefers-reduced-motion: reduce)`.
-- **JavaScript ES6 (Fetch API):** Manejo asíncrono para el envío interactivo del formulario de contacto integrado con Formspree.
+- **JavaScript ES6:** Manejo asíncrono para el envío interactivo del formulario (Fetch API + Formspree) y lógica de selección aleatoria sin repetición para el globo interactivo del avatar.
+
+---
+
+## ⚙️ Mantenimiento y Configuración de Git
+- **Ubicación de `.gitignore`:** Ubicado en la raíz del proyecto para definir las reglas de exclusión compartidas en el repositorio.
+- **Gestión de Exclusiones:** Se configuró `.gitignore` para desestimar del control de versiones archivos locales innecesarios o de entorno, como `.gitattributes`.
 
 ---
 
@@ -58,11 +64,15 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
 * **Paso 7: Integración de Formulario de Contacto Real (Formspree + JavaScript Fetch)**
   * *Prompt:* `"Configurá el formulario de contacto para enviar los datos de forma funcional utilizando la API de Formspree. Implementá un script de JavaScript nativo con la API Fetch para procesar la petición de forma asíncrona sin recargar la página, mostrando la confirmación mediante una alerta personalizada, limpiando los inputs (form.reset()) y realizando un desplazamiento suave al inicio de la página (window.scrollTo)."`
   * *Criterio y adaptación propia:* Mantuve la respuesta visual con `alert()` e incorporé la restauración del formulario y el scroll automático al inicio para optimizar la navegación del usuario tras el envío.
-  
+
 * **Paso 8: Configuración de Limpieza de Repositorio y Gitignore**
   * *Prompt:* `"Explicame cómo remover del seguimiento de Git el archivo .gitattributes y configurar el archivo .gitignore en la raíz del proyecto para evitar subir archivos no deseados manteniendo la estructura limpia."`
   * *Criterio y adaptación propia:* Ubiqué el archivo `.gitignore` en la raíz del proyecto e ingresé `.gitattributes` para quitarlo del rastreo en GitHub Desktop.
-  
+
+* **Paso 9: Ampliación de Habilidades e Interacción de Globo de Diálogo (Speech Bubble)**
+  * *Prompt:* `"Agregá nuevas tarjetas de habilidades técnicas para Analista Funcional, QA, Automatización y Python. Implementá una interacción JS para que al hacer clic en el avatar aparezca un globo de diálogo flotante estilo cómic con tips/enlaces aleatorios sin repetir el anterior y se cierre al volver a cliquear o hacer clic afuera."`
+  * *Criterio y adaptación propia:* Integré la lógica del array con 10 mensajes, estilizando el triángulo de cómic mediante pseudo-elementos `::after` en CSS.
+
 ---
 
 ## 📄 Licencia

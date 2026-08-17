@@ -137,6 +137,7 @@ img {
   background-color: rgba(56, 189, 248, 0.1);
   transform: translateY(-2px);
 }
+
 /* ==========================================================================
    4. MAQUETACIÓN CON FLEXBOX (Header, Nav, Portada, Footer)
    ========================================================================== */
@@ -232,11 +233,13 @@ img {
   flex-wrap: wrap;
 }
 
+/* Contenedor del Avatar y Globo estilo Cómic */
 .avatar-container {
   flex: 1 1 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .avatar {
@@ -246,6 +249,60 @@ img {
   border-radius: 50%;
   border: 3px solid var(--color-primary);
   box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+  cursor: pointer;
+}
+
+/* Estilos del Globo de Cómic */
+.speech-bubble {
+  position: absolute;
+  bottom: 108%;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  background-color: var(--color-bg-card);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem 1.1rem;
+  width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  z-index: 20;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease, visibility 0.3s ease;
+  text-align: center;
+}
+
+.speech-bubble p {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.speech-bubble code {
+  font-family: var(--font-code);
+  background-color: rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+}
+
+/* Triángulo/Colita apuntando hacia la boca de la ilustración */
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--color-primary) transparent;
+  display: block;
+  width: 0;
+}
+
+/* Estado oculto del globo */
+.speech-bubble.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) scale(0.7);
+  pointer-events: none;
 }
 
 /* Formulario de Contacto (Flexbox) */
@@ -310,12 +367,11 @@ img {
   gap: 1.5rem;
 }
 
-
 /* ==========================================================================
    5. MAQUETACIÓN CON CSS GRID (Habilidades y Proyectos)
    ========================================================================== */
 
-/* Cuadrícula de Habilidades (CSS Grid fluido sin Media Queries fijas) */
+/* Cuadrícula de Habilidades (CSS Grid fluido) */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -385,6 +441,7 @@ img {
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
 }
+
 /* ==========================================================================
    6. ANIMACIONES Y TRANSICIONES PERSONALIZADAS
    ========================================================================== */
@@ -410,7 +467,7 @@ img {
   animation: floatAvatar 4s ease-in-out infinite;
 }
 
-/* Transiciones interactivas en Tarjetas de Habilidades y Proyectos */
+/* Transiciones interactivas en Tarjetas */
 .skill-card:hover,
 .project-card:hover {
   transform: translateY(-5px);
@@ -418,7 +475,7 @@ img {
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.15);
 }
 
-/* Efecto visual suave en los enlaces de la navegación */
+/* Efecto visual suave en los enlaces de navegación */
 .nav__link {
   position: relative;
   transition: color var(--transition-fast);
@@ -438,6 +495,7 @@ img {
 .nav__link:hover::after {
   width: 100%;
 }
+
 /* ==========================================================================
    7. RESPONSIVE DESIGN (MEDIA QUERIES) & ACCESIBILIDAD
    ========================================================================== */
@@ -477,6 +535,11 @@ img {
   .footer {
     flex-direction: column;
     text-align: center;
+  }
+
+  .speech-bubble {
+    width: 220px;
+    bottom: 105%;
   }
 }
 
