@@ -264,7 +264,7 @@ img {
   padding: 0.85rem 1.1rem;
   width: 260px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  z-index: 20;
+  z-index: 101; /* <-- Cambiado de 20 a 101 para quedar sobre la nav */
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease, visibility 0.3s ease;
   text-align: center;
 }
@@ -562,9 +562,20 @@ img {
     text-align: center;
   }
 
+  /* Ajuste de la burbuja en pantallas chicas */
   .speech-bubble {
-    width: 220px;
-    bottom: 105%;
+    width: 240px;
+    bottom: auto;
+    top: 105%; /* Se despliega hacia ABAJO del avatar para no tapar ni ser tapada por el nav */
+    z-index: 101;
+  }
+
+  /* Invertimos el triangulito para que apunte hacia arriba (hacia la imagen) */
+  .speech-bubble::after {
+    bottom: auto;
+    top: -10px;
+    border-width: 0 10px 10px;
+    border-color: transparent transparent var(--color-primary);
   }
 }
 

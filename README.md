@@ -77,6 +77,10 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
   * *Prompt:* `"Agregá una leyenda o pista de texto bajo el avatar que indique 'Haz clic en la imagen' para guiar al usuario e incentivar la interacción con el globo estilo cómic, asegurando un diseño armónico con la paleta de colores."`
   * *Criterio y adaptación propia:* Incorporé el elemento con la clase `.avatar-hint` aplicando tipografía de estilo código (`Fira Code`) y bordes punteados para alinearlo a la estética tech.
 
+* **Paso 11: Corrección de Superposición Responsive en Globo de Diálogo (Bugfix Z-Index/Layout)**
+  * *Prompt:* `"En pantallas móviles el globo de diálogo quedaba tapado por la barra de navegación sticky. Ajustá el z-index y reposicioná la burbuja hacia abajo en la Media Query para asegurar visibilidad total."`
+  * *Criterio y adaptación propia:* Se incrementó el z-index a 101 y se cambió la posición del globo a `top: 105%` en mobile invirtiendo la colita apuntadora para una lectura limpia sin interferencia con la barra `<nav>`.
+
 ---
 
 ## 📄 Licencia
