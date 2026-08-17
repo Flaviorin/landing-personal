@@ -538,10 +538,13 @@ img {
     gap: 1rem;
   }
 
+  /* Ajuste de orden en la portada */
   .portada {
+    flex-wrap: wrap; /* Cambiado de wrap-reverse a wrap para que el texto quede PRIMERO */
     justify-content: center;
     text-align: center;
     padding-top: 2rem;
+    gap: 1.5rem;
   }
 
   .portada__tagline {
@@ -551,6 +554,27 @@ img {
 
   .portada__cta {
     justify-content: center;
+  }
+
+  /* Reducción del tamaño del avatar en celulares */
+  .avatar {
+    width: 180px;  /* Se achica de 260px a 180px para no ocupar tanto espacio */
+    height: 180px;
+  }
+
+  /* Ajuste de la burbuja para el nuevo tamaño de la imagen */
+  .speech-bubble {
+    width: 230px;
+    bottom: auto;
+    top: 105%;
+    z-index: 101;
+  }
+
+  .speech-bubble::after {
+    bottom: auto;
+    top: -10px;
+    border-width: 0 10px 10px;
+    border-color: transparent transparent var(--color-primary);
   }
 
   .section {
