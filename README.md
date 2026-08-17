@@ -73,6 +73,10 @@ En cumplimiento con los requisitos transversales del trabajo práctico, se docum
   * *Prompt:* `"Agregá nuevas tarjetas de habilidades técnicas para Analista Funcional, QA, Automatización y Python. Implementá una interacción JS para que al hacer clic en el avatar aparezca un globo de diálogo flotante estilo cómic con tips/enlaces aleatorios sin repetir el anterior y se cierre al volver a cliquear o hacer clic afuera."`
   * *Criterio y adaptación propia:* Integré la lógica del array con 10 mensajes, estilizando el triángulo de cómic mediante pseudo-elementos `::after` en CSS.
 
+* **Paso 10: Mejora de Usabilidad e Indicador Interactivo (UX Hint)**
+  * *Prompt:* `"Agregá una leyenda o pista de texto bajo el avatar que indique 'Haz clic en la imagen' para guiar al usuario e incentivar la interacción con el globo estilo cómic, asegurando un diseño armónico con la paleta de colores."`
+  * *Criterio y adaptación propia:* Incorporé el elemento con la clase `.avatar-hint` aplicando tipografía de estilo código (`Fira Code`) y bordes punteados para alinearlo a la estética tech.
+
 ---
 
 ## 📄 Licencia

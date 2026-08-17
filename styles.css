@@ -305,6 +305,31 @@ img {
   pointer-events: none;
 }
 
+/* Leyenda / Pista para hacer clic en el avatar */
+.avatar-container {
+  flex-direction: column; /* Alinea la imagen y la leyenda verticalmente */
+  gap: 0.75rem;
+}
+
+.avatar-hint {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  background-color: rgba(56, 189, 248, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  border: 1px dashed var(--color-primary);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.avatar-container:hover .avatar-hint {
+  background-color: rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+}
+
 /* Formulario de Contacto (Flexbox) */
 .contact-form {
   display: flex;
